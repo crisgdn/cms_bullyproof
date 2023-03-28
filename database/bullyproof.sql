@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 28, 2023 at 05:16 PM
+-- Generation Time: Mar 28, 2023 at 07:09 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -59,6 +59,9 @@ CREATE TABLE IF NOT EXISTS `events` (
   `date` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `link_name` varchar(1000) NOT NULL,
+  `live_link` varchar(1000) NOT NULL,
+  `images` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -68,10 +71,10 @@ CREATE TABLE IF NOT EXISTS `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `card`, `date`, `name`, `text`, `created_at`, `updated_at`) VALUES
-(1, 'event 1', 'MARCH 27, 2023\r\n\r\n', 'Bully Proof Hockey Camp', 'Join our charity hockey event by playing, celebrating, saying words of encouragement and being kind.', '2023-03-28 17:10:10', '2023-03-28 17:10:10'),
-(2, 'event 2', 'MARCH TO DECEMBER,2023', 'Bully Proof Hockey Fans', 'Let’s cheer for officials and players! Be a fan and celebrate the wins and the fails of both teams.', '2023-03-28 17:10:10', '2023-03-28 17:10:10'),
-(3, 'event 3', 'JANUARY TO DECEMBER, 2023', 'Bully Proof Tims Contest', 'Take a picture with a official or members of the other team and post on Instagram or twitter using the hashtag #bullyproofhockey.', '2023-03-28 17:14:09', '2023-03-28 17:14:09');
+INSERT INTO `events` (`id`, `card`, `date`, `name`, `text`, `link_name`, `live_link`, `images`, `created_at`, `updated_at`) VALUES
+(1, 'event 1', 'MARCH 27, 2023\r\n\r\n', 'Bully Proof Hockey Camp', 'Join our charity hockey event by playing, celebrating, saying words of encouragement and being kind.', 'Register', 'form.html', 'register1.jpg', '2023-03-28 17:10:10', '2023-03-28 17:10:10'),
+(2, 'event 2', 'MARCH TO DECEMBER,2023', 'Bully Proof Hockey Fans', 'Let’s cheer for officials and players! Be a fan and celebrate the wins and the fails of both teams.', 'Register', 'form.html', 'register2.jpg', '2023-03-28 17:10:10', '2023-03-28 17:10:10'),
+(3, 'event 3', 'JANUARY TO DECEMBER, 2023', 'Bully Proof Tims Contest', 'Take a picture with a official or members of the other team and post on Instagram or twitter using the hashtag #bullyproofhockey.', 'Participate', 'https://www.timhortons.ca/tims-nhl-hockey-challenge', 'register3.jpg', '2023-03-28 17:14:09', '2023-03-28 17:14:09');
 
 -- --------------------------------------------------------
 

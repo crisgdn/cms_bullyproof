@@ -34,7 +34,7 @@ class EmailController extends Controller
 
    $this->validate($request,[
      'name'=> 'required',
-   //   'id' => 'required|integer',
+     'id' => 'required|integer',
      'email'=> 'required|email',
      'message'=> 'required'
    ]);

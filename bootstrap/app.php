@@ -61,6 +61,7 @@ $app->singleton(
 
 $app->configure('app');
 
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
@@ -80,6 +81,15 @@ $app->configure('app');
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
+// $app->middleware([
+
+// 	Nord\Lumen\Cors\CorsMiddleware::class
+// ]);
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+]);
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -94,6 +104,7 @@ $app->configure('app');
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+// $app->register(Nord\Lumen\Cors\CorsServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -70,7 +70,7 @@ createApp({
   created() {
     
       // creating a fetch call from script/json.php to get the data from the database
-      fetch('./scripts/json.php')
+      fetch('http://localhost:8000/api/events/')//fetch api http://localhost:8000/api/events/
       .then(res => res.json())
       .then(data => {
           console.log(data);

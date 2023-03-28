@@ -20,7 +20,7 @@ export default {
                 {{event.date}}
             </p>
             <p class=date2>
-                {{event.Description}}
+                {{event.text}}
             </p>
         </div>
         <!-- button -->

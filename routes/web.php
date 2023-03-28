@@ -17,6 +17,8 @@
 //     return $router->app->version();
 // });
 
+$router->group(['prefix' => 'api'], function () use ($router) {
+
 $router->get('/', function () use ($router) {
     // return $router->app->version();
     return 'hellllllo';
@@ -97,3 +99,5 @@ $router->put('testimonials/{id}',['uses' => 'TestimonialController@getupdateTest
 
 //localhost:3306/testimonials/1
 $router->delete('testimonials/{id}',['uses' => 'TestimonialController@getdeleteTestimonial']);
+
+});
