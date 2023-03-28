@@ -25,27 +25,35 @@ class EmailController extends Controller
 //  }  
 
 
-
  public function getOneEmail($id){
 
     return response()->json(Email::find($id));
  }
  
+ public function createEmail(Request $request){
+
+   $this->validate($request,[
+     'name'=> 'required',
+   //   'id' => 'required|integer',
+     'email'=> 'required|email',
+     'message'=> 'required'
+   ]);
+   
+
+    $email = Email::create($request ->all());
+    return response()->json($email,201);
+  }  
  
- public function createEmail($id){
+  public function updateEmail(Request $request,$id){
+   $email = Email::findOrFail($id);
+   $email->update($request->all());
+   return response()->json($email,200);
+}
 
-    return response()->json();
- }  
+public function deleteEmail($id){
+   $email = Email::findOrFail($id)->delete();
+   return response()->json('deleted',200);
 
-
- public function updateEmail($id){
-
-    return response()->json();
- }  
-
-
- public function deleteEmail($id){
-
-    return response()->json();
  } 
+
 }

@@ -31,21 +31,32 @@ class TestimonialController extends Controller
     return response()->json(Testimonial::find($id));
  }
  
+ public function createTestimonial(Request $request){
+
+   $this->validate($request,[
+      'card'=> 'required',
+   // 'id' => 'required|integer',
+      'name'=> 'required', //'email'=> 'required|email',
+      'occupation'=> 'required',
+      'image'=> 'required',
+      'text'=> 'required'
+   ]);
+   
+   
+      $testimonial = Testimonial::create($request ->all());
+      return response()->json($testimonial,201);
+   }  
+    
+   public function updateTestimonial(Request $request,$id){
+      $testimonial = Testimonial::findOrFail($id);
+      $testimonial->update($request->all());
+      return response()->json($testimonial,200);
+   }
+   
+   public function deleteTestimonial($id){
+      $testimonial = Testimonial::findOrFail($id)->delete();
+      return response()->json('deleted',200);
+   
+    } 
  
- public function createTestimonial($id){
-
-    return response()->json();
- }  
-
-
- public function updateTestimonial($id){
-
-    return response()->json();
- }  
-
-
- public function deleteTestimonial($id){
-
-    return response()->json();
- } 
 }

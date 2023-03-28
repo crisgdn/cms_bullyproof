@@ -26,26 +26,37 @@ class EventController extends Controller
 
 
 
- public function getOneEvent($id){
+public function getOneEvent($id){
 
-    return response()->json(Event::find($id));
- }
+   return response()->json(Event::find($id));
+}
  
+public function createEvent(Request $request){
+
+$this->validate($request,[
+   'name'=> 'required',
+//   'id' => 'required|integer',
+   'card'=> 'required',
+   'date'=> 'required',
+   'text'=> 'required'
+]);
+
+
+
+   $event = Event::create($request ->all());
+   return response()->json($event,201);
+}  
  
- public function createEvent($id){
+public function updateEvent(Request $request,$id){
+   $event = Event::findOrFail($id);
+   $event->update($request->all());
+   return response()->json($event,200);
+}
 
-    return response()->json();
- }  
+public function deleteEvent($id){
+   $event = Event::findOrFail($id)->delete();
+   return response()->json('deleted',200);
 
-
- public function updateEvent($id){
-
-    return response()->json();
- }  
-
-
- public function deleteEvent($id){
-
-    return response()->json();
  } 
+
 }

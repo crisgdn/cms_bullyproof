@@ -1,4 +1,3 @@
-/*===== EXPANDER MENU  =====*/ 
 const showMenu = (toggleId, navbarId, bodyId)=>{
     const toggle = document.getElementById(toggleId),
     navbar = document.getElementById(navbarId),
@@ -36,5 +35,3 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
       rotate.classList.toggle('rotate')
     })
   }
-  
-  
