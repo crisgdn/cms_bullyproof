@@ -11,7 +11,9 @@ class Event extends Model
      *
      * @var array
      */
-    protected $fillable = ['card','name','date','text'];
+    protected $fillable = ['card','name','date','text','image','link_name','live_link'];
+
+   
 
     /**
      * The attributes excluded from the model's JSON form.
