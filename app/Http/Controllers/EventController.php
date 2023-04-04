@@ -48,7 +48,7 @@ $this->validate($request,[
 
    $event = Event::create($request ->all());
    return response()->json($event,201);
-   header("location:./website/index.html");
+   header("location:./website/index.html");//verificar location
 }  
  
 public function updateEvent(Request $request,$id){

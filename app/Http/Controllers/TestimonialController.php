@@ -35,7 +35,7 @@ class TestimonialController extends Controller
 
    $this->validate($request,[
       'card'=> 'required',
-   // 'id' => 'required|integer',
+      'id' => 'required|integer',
       'name'=> 'required', //'email'=> 'required|email',
       'occupation'=> 'required',
       'image'=> 'required',
