@@ -17,7 +17,7 @@
 //     return $router->app->version();
 // });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+// $router->group(['prefix' => 'api'], function () use ($router) {
 
 $router->get('/', function () use ($router) {
     // return $router->app->version();
@@ -27,55 +27,55 @@ $router->get('/', function () use ($router) {
 /*--------------------------EMAIL---------------------------------*/
 //
 
-//localhost:3306/emails
+//localhost:8000/emails
 $router->get('emails',['uses' => 'EmailController@getAllEmails']);
 
-//localhost:3306/emails/1
+//localhost:8000/emails/1
 $router->get('emails/{id}',['uses' => 'EmailController@getOneEmail']);
 
 
-//localhost:3306/emails/
-$router->post('emails',['uses' => 'EmailController@getcreateEmail']);
+//localhost:8000/emails/
+$router->post('emails/create',['uses' => 'EmailController@getcreateEmail']);
 
-//localhost:3306/emails/1
+//localhost:8000/emails/1
 $router->put('emails/{id}',['uses' => 'EmailController@getupdateEmail']);
 
-//localhost:3306/emails/1
+//localhost:8000/emails/1
 $router->delete('emails/{id}',['uses' => 'EmailController@getdeleteEmail']);
 
 
 /*--------------------------EVENT---------------------------------*/
 //
 
-//localhost:3306/events
+//localhost:8000/events
 $router->get('events',['uses' => 'EventController@getAllEvents']);
 
-//localhost:3306/events/1
+//localhost:8000/events/1
 $router->get('events/{id}',['uses' => 'EventController@getOneEvent']);
 
-//localhost:3306/events/
+//localhost:8000/events/
 $router->post('events',['uses' => 'EventController@getcreateEvent']);
 
-//localhost:3306/events/1
+//localhost:8000/events/1
 $router->put('events/{id}',['uses' => 'EventController@getupdateEvent']);
 
-//localhost:3306/events/1
+//localhost:8000/events/1
 $router->delete('events/{id}',['uses' => 'EventController@getdeleteEvent']);
 
 
 /*--------------------------REGISTER---------------------------------*/
 //
 
-//localhost:3306/registers
+//localhost:8000/registers
 $router->get('registers',['uses' => 'RegisterController@getAllRegisters']);
 
-//localhost:3306/registers/1
+//localhost:8000/registers/1
 $router->get('registers/{id}',['uses' => 'RegisterController@getOneRegister']);
 
-//localhost:3306/registers/
+//localhost:8000/registers/
 $router->post('registers',['uses' => 'RegisterController@getcreateRegister']);
 
-//localhost:3306/registers/1
+//localhost:8000/registers/1
 $router->put('registers/{id}',['uses' => 'RegisterController@getupdateRegister']);
 
 //localhost:3306/registers/1
@@ -100,4 +100,4 @@ $router->put('testimonials/{id}',['uses' => 'TestimonialController@getupdateTest
 //localhost:3306/testimonials/1
 $router->delete('testimonials/{id}',['uses' => 'TestimonialController@getdeleteTestimonial']);
 
-});
+// });

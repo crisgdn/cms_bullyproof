@@ -51,4 +51,17 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
+//     public function render($request, Throwable $exception)
+// {
+//         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
+//             if ($request->wantsJson()) {
+//                 return response()->json(['message' => 'No way José'],  404);
+//             }
+
+//             return redirect('/');
+//         }
+//         return parent::render($request, $exception);
+//  }
+
 }
