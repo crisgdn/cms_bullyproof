@@ -35,7 +35,6 @@ class RegisterController extends Controller
 
    $this->validate($request,[
       'name'=> 'required',
-      'id' => 'required|integer',
       'email'=> 'required', //'email'=> 'required|email',
       'event'=> 'required',
       'comments'=> 'required'

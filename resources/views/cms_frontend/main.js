@@ -35,3 +35,5 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
       rotate.classList.toggle('rotate')
     })
   }
+
+   /*===== VUE APP  =====*/ 
