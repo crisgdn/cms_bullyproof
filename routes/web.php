@@ -44,25 +44,6 @@ $router->put('emails/{id}',['uses' => 'EmailController@updateEmail']);
 $router->delete('emails/{id}',['uses' => 'EmailController@deleteEmail']);
 
 
-/*--------------------------EVENT---------------------------------*/
-//
-
-//localhost:8000/events
-$router->get('events',['uses' => 'EventController@getAllEvents']);
-
-//localhost:8000/events/1
-$router->get('events/{id}',['uses' => 'EventController@getOneEvent']);
-
-//localhost:8000/events/
-$router->post('events',['uses' => 'EventController@createEvent']);
-
-//localhost:8000/events/1
-$router->put('events/{id}',['uses' => 'EventController@updateEvent']);
-
-//localhost:8000/events/1
-$router->delete('events/{id}',['uses' => 'EventController@deleteEvent']);
-
-
 /*--------------------------REGISTER---------------------------------*/
 //
 
@@ -80,6 +61,26 @@ $router->put('registers/{id}',['uses' => 'RegisterController@updateRegister']);
 
 //localhost:3306/registers/1
 $router->delete('registers/{id}',['uses' => 'RegisterController@deleteRegister']);
+
+
+/*--------------------------EVENT---------------------------------*/
+//
+
+//localhost:8000/events
+$router->get('events',['uses' => 'EventController@getAllEvents']);
+
+//localhost:8000/events/1
+$router->get('events/{id}',['uses' => 'EventController@getOneEvent']);
+
+//localhost:8000/events/
+$router->post('events',['uses' => 'EventController@createEvent']);
+
+//localhost:8000/events/1
+$router->post('events/{id}',['uses' => 'EventController@updateEvent']);
+
+//localhost:8000/events/1
+$router->delete('events/{id}',['uses' => 'EventController@deleteEvent']);
+
 
 
 /*--------------------------TESTIMONIAL---------------------------------*/

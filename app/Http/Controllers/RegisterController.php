@@ -39,7 +39,10 @@ class RegisterController extends Controller
       return response()->json($register,201);
    }  
     
-   public function updateRegister(Request $request,$id){
+
+
+
+   public function updateRegister(Request $request, $id){
       $register = Register::findOrFail($id);
       $register->update($request->all());
       return response()->json($register,200);

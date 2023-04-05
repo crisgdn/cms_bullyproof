@@ -19,12 +19,6 @@ class EventController extends Controller
  }   
 
 
-//  public function getAllEvents(){
-
-//     return response()->json(Event::join('authors', 'author_id', '=', 'authors.id')->select('books.id','title','published_date','name')->get());
-//  }  
-
-
 
 public function getOneEvent($id){
 
@@ -38,22 +32,90 @@ $this->validate($request,[
    'date'=> 'required',
    'name'=> 'required',
    'text'=> 'required',
-   'link_name'=> 'required',
-   'live_link'=> 'required',
-   'images'=> 'required',
+   'link'=> 'required',
+   'live'=> 'required',
+   'photo'=> 'required',
 ]);
 
+   $event = new Event(); 
+   
+   if($request->hasFile('photo')) {
 
+      $allowedfileExtension=['pdf','jpg','png'];
+      $file = $request->file('photo');
+      $extenstion = $file->getClientOriginalExtension();
+      $check = in_array($extenstion, $allowedfileExtension);
+   
+      if($check){
+          $image = time() . $file->getClientOriginalName();
+          $file->move('photos', $image);//photos is the folder inside of public
+          $event->photo = $image;
+      }
+      }
+      
 
-   $event = Event::create($request ->all());
-   return response()->json($event,201);
+      // text data
+      $event->card = $request->input('card');
+      $event->date = $request->input('date');
+      $event->name = $request->input('name');
+      $event->text = $request->input('text');
+      $event->link = $request->input('link');
+      $event->live = $request->input('live');
+   
+      $event->save();
+      return response()->json($event);
+
 }  
  
+
+
+//////////////////////UPDATE//////////////////////////
+
 public function updateEvent(Request $request,$id){
-   $event = Event::findOrFail($id);
-   $event->update($request->all());
-   return response()->json($event,200);
+   $this->validate($request,[
+      'card'=> 'required',
+      'date'=> 'required',
+      'name'=> 'required',
+      'text'=> 'required',
+      'link'=> 'required',
+      'live'=> 'required',
+      'photo'=> 'required',
+   ]);
+   
+      $event = Event::find($id); 
+
+      
+      if($request->hasFile('photo')) {
+   
+         $allowedfileExtension=['pdf','jpg','png'];
+         $file = $request->file('photo');
+         $extenstion = $file->getClientOriginalExtension();
+         $check = in_array($extenstion, $allowedfileExtension);
+      
+         if($check){
+             $image = time() . $file->getClientOriginalName();
+             $file->move('photos', $image);//photos is the folder inside of public
+             $event->photo = $image;
+         }
+         }
+         
+   
+         // text data
+         $event->card = $request->input('card');
+         $event->date = $request->input('date');
+         $event->name = $request->input('name');
+         $event->text = $request->input('text');
+         $event->link = $request->input('link');
+         $event->live = $request->input('live');
+      
+         $event->save();
+         return response()->json($event);
 }
+
+
+
+
+//////////////////////DELETE//////////////////////////
 
 public function deleteEvent($id){
    $event = Event::findOrFail($id)->delete();
