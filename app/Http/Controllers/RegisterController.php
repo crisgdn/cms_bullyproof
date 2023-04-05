@@ -19,12 +19,6 @@ class RegisterController extends Controller
  }   
 
 
-//  public function getAllRegisters(){
-
-//     return response()->json(Register::join('authors', 'author_id', '=', 'authors.id')->select('books.id','title','published_date','name')->get());
-//  }  
-
-
 
  public function getOneRegister($id){
 
@@ -35,7 +29,7 @@ class RegisterController extends Controller
 
    $this->validate($request,[
       'name'=> 'required',
-      'email'=> 'required', //'email'=> 'required|email',
+      'email'=> 'required',
       'event'=> 'required',
       'comments'=> 'required'
    ]);
@@ -50,6 +44,7 @@ class RegisterController extends Controller
       $register->update($request->all());
       return response()->json($register,200);
    }
+
    
    public function deleteRegister($id){
       $register = Register::findOrFail($id)->delete();

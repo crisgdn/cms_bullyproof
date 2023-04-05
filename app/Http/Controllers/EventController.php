@@ -34,21 +34,19 @@ public function getOneEvent($id){
 public function createEvent(Request $request){
 
 $this->validate($request,[
-   'id' => 'required|integer',
    'card'=> 'required',
-   'name'=> 'required',
    'date'=> 'required',
+   'name'=> 'required',
    'text'=> 'required',
-   'image'=> 'required',
    'link_name'=> 'required',
-   'live_link'=> 'required'
+   'live_link'=> 'required',
+   'images'=> 'required',
 ]);
 
 
 
    $event = Event::create($request ->all());
    return response()->json($event,201);
-   header("location:./website/index.html");//verificar location
 }  
  
 public function updateEvent(Request $request,$id){

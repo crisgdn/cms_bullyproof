@@ -95,7 +95,7 @@ $router->get('testimonials/{id}',['uses' => 'TestimonialController@getOneTestimo
 $router->post('testimonials',['uses' => 'TestimonialController@createTestimonial']);
 
 //localhost:3306/testimonials/1
-$router->put('testimonials/{id}',['uses' => 'TestimonialController@updateTestimonial']);
+$router->post('testimonials/{id}',['uses' => 'TestimonialController@updateTestimonial']);
 
 //localhost:3306/testimonials/1
 $router->delete('testimonials/{id}',['uses' => 'TestimonialController@deleteTestimonial']);

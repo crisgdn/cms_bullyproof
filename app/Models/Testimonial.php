@@ -11,7 +11,7 @@ class Testimonial extends Model
      *
      * @var array
      */
-    protected $fillable = ['card','name','occupation','image','text'];
+    protected $fillable = ['card','image','name','occupation','text'];
 
     /**
      * The attributes excluded from the model's JSON form.
