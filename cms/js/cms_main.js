@@ -2,6 +2,7 @@
 import registercomponents from './components/registercomponents.js';
 import theemailcomponents from './components/emailcomponents.js';
 import theeventcomponents from './components/eventcomponents.js';
+
 import testimonialcomponents from './components/testimonialscomponents.js';
 
 
@@ -54,6 +55,7 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
         .then(data => {
             console.log(data);
             this.eventData = data;
+            // this.eventupData = data;
         })
         .catch((err) => {
 
@@ -65,20 +67,23 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
     data() {
         return {
             eventData: {},
-
         }
     },
 
+    props: {
+      event: Object
+   },
+
     components: {
-        eventtag: theeventcomponents,
-        
+        eventtag: theeventcomponents,        
     },
 
-    methods: {    
+    methods: {
 
-    }
+  }
     })
     events.mount('#events');
+  
 
     const email = Vue.createApp({
       created() {
@@ -170,11 +175,6 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
         testimonialtag:testimonialcomponents,
       },
     
-      methods: {
-    
-        
-    
-      }
     })
     testimonials.mount('#testimonials');
 

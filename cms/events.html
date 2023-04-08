@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -56,12 +57,11 @@
         </header>
 
         <!--- Forms --->
-        <main id="app" class="">
+        <main id="" class="">
             <h2>Create New Event</h2>
 
             <!--- CARD --->
-            <form id=form-create class="edit-blog-form" 
-             method="POST" action="http://localhost:8000/api/events/">
+            <form action ="http://localhost:8000/api/events/" method="POST" class="edit-blog-form">
 
                 <div class="form-field field-1 medium">
                   <label for="card">Card Title</label>
@@ -80,70 +80,22 @@
                   <textarea id="text" type="text" rows="3" name="text"></textarea>
                 </div>
                 <div class="form-field field-5 short">
-                  <label for="image">Image</label>
-                  <input id="image" type="file" name="image">
+                  <label for="photo">Photo</label>
+                  <input id="photo" type="file" name="photo" accept="photo/png, photo/jpeg, photo/jpg">
                 </div>
                 <div class="form-field field-6 short">
-                  <label for="link_name">Button Name</label>
-                  <select id="link_name" name="link_name">
-                    <option value="" disabled selected>Select</option>
-                    <option value="Register">Register</option>
-                    <option value="Participate">Participate</option>
-                    <option value="Learn More">Learn More</option>
-                  </select>
+                  <label for="link">Button Name</label>
+                  <input id="link" type="text" name="link">
                 </div>
                 <div class="form-field field-2 medium">
-                  <label for="live_link">link</label>
-                  <input id="live_link" type="text" name="live_link">
+                  <label for="live">Button Link</label>
+                  <input id="live" type="text" name="live">
                 </div>
                 <div class="inline-form">
-                  <button class="black" type="submit">Update</button>
+                  <button class="black" type="submit">Create</button>
                   <button type="submit">Cancel</button>
                 </div>
               </form>
-              
-          <!--- Form update --->
-
-          <h2>Update Event</h2>
-
-          <!--- CARD --->
-          <form id=form-create class="edit-blog-form" 
-           method="POST" action="http://localhost:8000/api/events/">
-
-              <div class="form-field field-1 medium">
-                <label for="card">Card Title</label>
-                <input id="card" type="text" name="card">
-              </div>
-              <div class="form-field field-2 medium">
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name">
-              </div>
-              <div class="form-field field-3 medium">
-                  <label for="date">Date</label>
-                  <input id="date" type="text" name="date">
-                </div>
-              <div class="form-field field-4 medium">
-                <label for="text">Body Text</label>
-                <textarea id="text" type="text" rows="3" name="text"></textarea>
-              </div>
-              <div class="form-field field-5 short">
-                <label for="image">Image</label>
-                <input id="image" type="file" name="image">
-              </div>
-              <!-- <div class="form-field field-6 short">
-                <label for="post-category">Card</label>
-                <select id="post-category" name="post-category">
-                  <option value="" disabled selected>Select</option>
-                  <option value="event 1">event 1</option>
-                  <option value="event 2">event 2</option>
-                  <option value="event 3">event 3</option>
-                </select>
-              </div> -->
-              <div class="inline">
-                <button type="submit">Update</button>
-                <button type="submit">Cancel</button>
-              </div>
-            </form>
         </main>   
 
 
