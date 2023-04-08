@@ -1,0 +1,74 @@
+// ui verse ion: 1.0.0
+
+
+//color palette
+$color-primary: #E94B5C;
+$color-secondary:#279AF1;
+$color-neutral-1: #60656F;
+$color-neutral-2: #000000;
+
+//typography scale for desktop 
+
+
+// for h2
+
+h2 {
+    /* H2 */
+font-family: 'Heavitas';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 46px;
+
+}
+
+//for h3
+h3 {
+    /* H3 */
+font-family: 'Heavitas';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+}
+
+// for h4
+h4 {
+    /* H4 */
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 30px;
+}
+
+// for p
+p {
+    /*p */
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 30px;
+
+}
+
+:root {
+    --color-primary: #E94B5C;
+    --color-secondary: #279AF1;
+    --color-neutral-1: #60656F;
+    --color-neutral-2: #000000;
+
+    //fonts
+    --font-primary: 'Heavitas';
+    --font-secondary: 'Helvetica';
+    --font-size: 16px;
+    --font-size-2: 18px;
+    --font-size-3: 36px;
+    
+}
+
+
+#hero {
+    width: 100%;
+}

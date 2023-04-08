@@ -1,0 +1,29 @@
+{
+    "Event1": {
+        "name": "Bully Proof Hockey Camp",
+        "date": "MARCH 27, 2023",
+        "Description": "Join our charity hockey event by playing, celebrating, saying words of encouragement and being kind.",
+        "images": "register1.jpg",
+        "link_name": "Register",
+        "live_link": "https://brandbuild.hiralshahh.com/"
+
+    },
+
+    "Event2": {
+        "name": "Bully Proof Hockey Fans",
+        "date": "MARCH TO DECEMBER,2023",
+        "Description": "Let’s cheer for officials and players! Be a fan and celebrate the wins and the fails of both teams.",
+        "images": "t2.png",
+        "link_name": "Register",
+        "live_link": "https://music-mixer.hiralshahh.com/"
+    },
+    "Event3": {
+        "name": "Bully Proof Tims Contest",
+        "date": "JANUARY TO DECEMBER, 2023",
+        "Description": "Take a picture with a official or members of the other team and post on Instagram or twitter using the hashtag #bullyproofhockey",
+        "images": "t3.png",
+        "link_name": "Participate",
+        "live_link": "https://music-mixer.hiralshahh.com/",
+        "button_class": "btn_learnmore1 "
+    }
+}
