@@ -21,12 +21,32 @@ export default {
     <td data-label="Email"><br>{{email.email}}</td><br> 
     <td data-label="Message"><br>{{email.message}}</td><br> 
 
-    <button type="">Delete</button>
+    <td><button v-on:click="deleteEmail(email.id)">Detete</button></td>  
     </tr>
                         
     </tbody>
 </table> 
 
-`
+`,
+    methods: {        
+        deleteEmail(id) {
+            console.log("id", id); // Verificar o valor de "id" aqui
+            fetch('http://localhost:8000/api/emails/' + id ,{
+            method:  'DELETE',
+            })
+            .then(response => response.json())
+            .then(data => {console.log(data);
+                this.emailData = data;
+            })
+            .catch(err => console.log)
+        }
+
+    },
+
+    data() {
+        return {
+            eventData: {},
+        }
+    },
    
 }

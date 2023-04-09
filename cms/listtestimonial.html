@@ -62,7 +62,7 @@
             <a href="testimonials.html"><button>Add new</button></a>
             <a href="edittestimonials.html"><button>Update</button></a>
             </div>
-            <testimonialtag v-for="testimonial in testimonialData" :testimonial="testimonial"></testimonialtag>                
+            <testimonialtag v-for="testimonial in testimonialData" :testimonial="testimonial" :key="testimonial.id"></testimonialtag>                
         </main>   
 
 

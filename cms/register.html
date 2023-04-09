@@ -58,7 +58,7 @@
         <!--- Table Email --->
         <main id="register" class="">
             <h2>Registers Camp</h2>
-            <registertag v-for="register in registerData" :register="register"></registertag>                  
+            <registertag v-for="register in registerData" :register="register" :key="register.id"></registertag>                  
         </main>   
 
 

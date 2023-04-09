@@ -52,10 +52,8 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
         // creating a fetch call from script/json.php to get the data from the database
         fetch('http://localhost:8000/api/events')//fetch api http://localhost:8000/api/events/
         .then(res => res.json())
-        .then(data => {
-            console.log(data);
+        .then(data => {console.log(data);
             this.eventData = data;
-            // this.eventupData = data;
         })
         .catch((err) => {
 
@@ -79,6 +77,21 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
     },
 
     methods: {
+      updateEvent() {
+        fetch('http://localhost:8000/api/events/'+id ,{
+          method:  'PUT',
+        })
+          .then(response => response.json())
+          .then(data => console.log(data))
+      },
+
+      deleteEvent(id) {
+        fetch('http://localhost:8000/api/events/'+id ,{
+          method:  'DELETE',
+        })
+          .then(response => response.json())
+          .then(data => console.log(data))
+      }
 
   }
     })

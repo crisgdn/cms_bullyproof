@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export default {
     name: 'theeventcomponents',
 
@@ -25,19 +23,27 @@ export default {
         </tbody>        
     </table>         
 
-`,
-    mounted(){
-      this.getEvents();
-    },
-        
+`,   
     
-    methods: {
+    methods: {        
+        deleteEvent(id) {
+            console.log("id", id); // Verificar o valor de "id" aqui
+            fetch('http://localhost:8000/api/events/' + id ,{
+              method:  'DELETE',
+            })
+              .then(response => response.json())
+              .then(data => {console.log(data);
+                this.eventData = data;
+            })
+              .catch(err => console.log)
+          }
 
-            deleteEvent(id){
-                //pass the individual object back to the main VM
-                this.axios.delete("http://localhost:8000/api/events/"+id);
-                // this.eventData.delete("http://localhost:8000/api/events/"+id);
-            }
-}
-   
+    },
+
+    data() {
+        return {
+            eventData: {},
+        }
+    },
+    
 }

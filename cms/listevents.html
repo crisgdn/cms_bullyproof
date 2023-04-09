@@ -63,7 +63,7 @@
             <a href="editevents.html"><button>Update</button></a>
             </div>
             
-            <eventtag v-for="event in eventData" :event="event"></eventtag>                  
+            <eventtag v-for="event in eventData" :event="event" :key="event.id"></eventtag>                  
         </main>   
 
 

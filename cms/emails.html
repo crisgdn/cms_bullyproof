@@ -59,7 +59,7 @@
         <!--- Table Email --->
         <main id="email" class="">
             <h2>Emails Website</h2>
-            <emailtag v-for="email in emailData" :email="email"></emailtag>                  
+            <emailtag v-for="email in emailData" :email="email" :key="email.id"></emailtag>                  
         </main>  
 
         <footer>

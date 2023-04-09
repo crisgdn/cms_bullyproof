@@ -22,12 +22,32 @@ export default {
         <td data-label="Email"><br>{{register.email}}</td><br>
         <td data-label="Events"><br>{{register.event}}</td><br>
         <td data-label="Comments"><br>{{register.comments}}</td><br>
-        <button type="">Delete</button>
+        <td><button v-on:click="deleteRegister(register.id)">Detete</button></td>  
         </tr>
                             
         </tbody>
     </table>             
 
-`
+`,
+        methods: {        
+            deleteRegister(id) {
+                console.log("id", id); // Verificar o valor de "id" aqui
+                fetch('http://localhost:8000/api/registers/' + id ,{
+                method:  'DELETE',
+                })
+                .then(response => response.json())
+                .then(data => {console.log(data);
+                    this.registerData = data;
+                })
+                .catch(err => console.log)
+            }
+
+        },
+
+        data() {
+            return {
+                registerData: {},
+            }
+        },
    
 }
