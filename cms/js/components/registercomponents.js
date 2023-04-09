@@ -6,23 +6,22 @@ export default {
     },
 
     template: `
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Name</th><br>                        
-                <th scope="col">Email</th><br>
-                <th scope="col">Events</th><br>
-                <th scope="col">Comments</th><br>
-            </tr>
-        </thead>
 
+    <div class="inline-form box" v-if="box">
+    <p>Are you sure you want to delete this item?</p>
+    <button v-on:click="deleteRegister(register.id)">Detete</button>
+    <button class="black" v-on:click="box = false">Cancel</button> 
+    </div>  
+
+    <table>
+       
         <tbody>
         <tr>
         <td scope="row" data-label="Name"><br>{{register.name}}</td><br>    
         <td data-label="Email"><br>{{register.email}}</td><br>
         <td data-label="Events"><br>{{register.event}}</td><br>
         <td data-label="Comments"><br>{{register.comments}}</td><br>
-        <td><button v-on:click="deleteRegister(register.id)">Detete</button></td>  
+        <td><button v-on:click="box = true">Detete</button></td>  
         </tr>
                             
         </tbody>
@@ -47,6 +46,7 @@ export default {
         data() {
             return {
                 registerData: {},
+                box: false,
             }
         },
    

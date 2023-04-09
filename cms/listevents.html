@@ -18,7 +18,7 @@
                         <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
                     </div>
                     <div class="nav__list">
-                        <a href="index.html" class="nav__link active">
+                        <a href="index.html" class="nav__link">
                             <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                             <span class="nav__name">Home</span>
                         </a>
@@ -28,7 +28,7 @@
                             <span class="nav__name">Testimonials</span>
                         </a>
 
-                        <a href="listevents.html" class="nav__link">
+                        <a href="listevents.html" class="nav__link active">
                             <ion-icon name="document-outline" class="nav__icon"></ion-icon>
                             <span class="nav__name">Events</span>
                         </a>
@@ -63,9 +63,6 @@
             </div>
             <hr>
             
-            <!-- <eventedittag :event="loadUpdate" @closeUpdate="showForm=false" v-if="showForm"></eventedittag> -->
-            
-            <!-- <eventtag @loadlbdata="loadEventedit" v-for="event in eventData" :event="event" :key="event.id"></eventtag> -->
             <eventtag v-for="event in eventData" :event="event" :key="event.id"></eventtag>                 
         </main>   
 
