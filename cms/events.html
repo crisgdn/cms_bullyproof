@@ -61,7 +61,7 @@
             <h2>Create New Event</h2>
 
             <!--- CARD --->
-            <form action ="http://localhost:8000/api/events/" method="POST" class="edit-blog-form">
+            <form action ="http://localhost:8000/api/events/" method="POST" class="edit-blog-form" enctype="multipart/form-data">
 
                 <div class="form-field field-1 medium">
                   <label for="card">Card Title</label>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="form-field field-5 short">
                   <label for="photo">Photo</label>
-                  <input id="photo" type="file" name="photo" accept="photo/png, photo/jpeg, photo/jpg">
+                  <input id="photo" type="file" name="photo" accept="image/png, image/jpeg, image/jpg">
                 </div>
                 <div class="form-field field-6 short">
                   <label for="link">Button Name</label>

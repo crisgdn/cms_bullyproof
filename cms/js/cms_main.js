@@ -2,8 +2,8 @@
 import registercomponents from './components/registercomponents.js';
 import theemailcomponents from './components/emailcomponents.js';
 import theeventcomponents from './components/eventcomponents.js';
-
 import testimonialcomponents from './components/testimonialscomponents.js';
+import eventedit from './components/editevents.js';
 
 
 const showMenu = (toggleId, navbarId, bodyId)=>{
@@ -73,27 +73,13 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
    },
 
     components: {
-        eventtag: theeventcomponents,        
+        eventtag: theeventcomponents,
+        eventedittag: eventedit        
     },
 
     methods: {
-      updateEvent() {
-        fetch('http://localhost:8000/api/events/'+id ,{
-          method:  'PUT',
-        })
-          .then(response => response.json())
-          .then(data => console.log(data))
-      },
-
-      deleteEvent(id) {
-        fetch('http://localhost:8000/api/events/'+id ,{
-          method:  'DELETE',
-        })
-          .then(response => response.json())
-          .then(data => console.log(data))
-      }
-
-  }
+  
+    }
     })
     events.mount('#events');
   
