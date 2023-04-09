@@ -60,10 +60,13 @@
             <h2>Events</h2>
             <div class="inline">
             <a href="events.html"><button>Add new</button></a>
-            <a href="editevents.html"><button>Update</button></a>
             </div>
+            <hr>
             
-            <eventtag v-for="event in eventData" :event="event" :key="event.id"></eventtag>                  
+            <!-- <eventedittag :event="loadUpdate" @closeUpdate="showForm=false" v-if="showForm"></eventedittag> -->
+            
+            <!-- <eventtag @loadlbdata="loadEventedit" v-for="event in eventData" :event="event" :key="event.id"></eventtag> -->
+            <eventtag v-for="event in eventData" :event="event" :key="event.id"></eventtag>                 
         </main>   
 
 

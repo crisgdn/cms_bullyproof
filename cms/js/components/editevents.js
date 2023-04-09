@@ -1,6 +1,8 @@
 export default {
     name: 'eventedit',
 
+    emits: ['closeupdate'],
+
     props: {
        event: Object
     },
@@ -51,11 +53,12 @@ export default {
           </div>
             
             <div class="inline-form">
-            <button v-on:click="updateEvent(event.id)" type="submit">Update</button>  
-              <button class="black" type="submit">Cancel</button>
+            <button v-on:click="updateEvent(event.id)" type="submit">Update</button>
+            <button class="black" @click="cancel">Cancel</button>  
             </div>
           </form>
-            
+          <hr>
+          
 
 `,   
     
@@ -70,7 +73,11 @@ export default {
                 this.eventData = data;
             })
                 .catch(err => console.log)
-          }
+          },
+
+          cancel() {
+            this.$emit('closeupdate');
+        }
 
     },
 
