@@ -23,6 +23,7 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
 showMenu('nav-toggle','navbar','body-pd')
 
 
+
    /*===== VUE APP  =====*/ 
 
       // creating the vue app
@@ -39,6 +40,31 @@ showMenu('nav-toggle','navbar','body-pd')
             console.error(err);
         })
     },
+
+    CreateEvent() {
+      
+      fetch('http://localhost:8000/api/events/',{
+      method:  'POST',
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Network response was not ok.');
+        }
+      })
+      .then(data => {
+        console.log(data);
+        this.eventData = data;
+        alert("SUCCESSFUL!");
+      })
+      .catch(err => {
+        console.error('There was a problem with the fetch operation:', err);
+        alert("FAILURE!");
+
+        return false;
+      });
+  },
 
 
     data() {

@@ -13,7 +13,12 @@
     
 }
 
-
+#footer-form {
+    width: 100%;
+    // stick it to the bottom the page 
+    height: 50vh;
+    display: flex;
+}
 .footer {
     font-family: 'Helvetica';
     font-style: normal;
@@ -79,7 +84,13 @@
         color: #fff;
         background-color: var(--color-primary);
     }
-
+    
+    #footer-form {
+        height: 20vh;
+        padding: 20px;
+        color: #fff;
+        background-color: var(--color-primary);
+    }
     .footer {
         display: grid; 
         grid-template-columns: repeat(2,1fr);

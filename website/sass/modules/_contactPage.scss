@@ -21,6 +21,15 @@
 
 }
 
+.contact_section-form {
+    display: grid;
+    width: 300px;
+    min-height: 512px;  
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
 
 .contactus {
 font-family: 'Heavitas';
@@ -65,7 +74,7 @@ color: #E94B5C;
     }
 
     .contact_field {
-        background: #EFEFEF;
+        background: #e4e4e4;
         border-radius: 30px;
         width: 80%;
         height: 40px;
@@ -228,6 +237,19 @@ color: #E94B5C;
     #contact_sectionx   {
         width: 100%;
         background-image: url(../images/desktop_jpg/background_contact_us.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // height: 450px;
+        height: 70vh;
+        display: flex;
+        justify-content: flex-end;
+        position: sticky;
+
+    }
+
+    #form_section {
+        width: 100%;
+        background-image: url(../images/form_photo.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         // height: 450px;

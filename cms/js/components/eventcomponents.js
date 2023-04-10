@@ -45,7 +45,7 @@ export default {
 
           <div class="form-field field-7 medium">
               <label for="live">Link Page</label>
-              <input id="live" type="url" name="live">
+              <input id="live" type="text" name="live">
           </div>
 
           <div class="form-field field-8 short">
