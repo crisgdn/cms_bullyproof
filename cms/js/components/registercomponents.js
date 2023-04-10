@@ -37,6 +37,8 @@ export default {
                 .then(response => response.json())
                 .then(data => {console.log(data);
                     this.registerData = data;
+                    alert("DELETED");
+                    window.location.reload(); // recarregar a página
                 })
                 .catch(err => console.log)
             }

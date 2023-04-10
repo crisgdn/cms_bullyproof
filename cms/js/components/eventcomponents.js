@@ -62,13 +62,12 @@ export default {
     </div>
     <div class="inline-form box" v-if="box">
     <p>Are you sure you want to delete this item?</p>
-    <button v-on:click="deleteEvent(event.id)">Detete</button>
+    <button  class="red" v-on:click="deleteEvent(event.id)">Detete</button>
     <button class="black" v-on:click="box = false">Cancel</button> 
    </div>  
     <table>     
         <tbody>
             <tr>
-                <td><button v-on:click="showForm = true">Update</button></td>  
                 <td scope="row" data-label="ID"><br>{{event.id}}</td>
                 <td scope="row" data-label="Card"><br>{{event.card}}</td>
                 <td data-label="Date"><br>{{event.date}}</td>
@@ -76,9 +75,8 @@ export default {
                 <td data-label="Text"><br>{{event.text}}</td>
                 <td data-label="Link"><br>{{event.link}}</td>
                 <td data-label="Live"><br>{{event.live}}</td>
-                <td data-label="Photo"><br>{{event.photo}}</td>
-                
-                <td><button v-on:click="box = true">Detete</button></td>     
+                <td data-label="Photo"><br>{{event.photo}}</td>                
+                <td class="buttons"><button class="red" v-on:click="box = true">Detete</button> <button v-on:click="showForm = true">Update</button></td>     
             </tr>
         </tbody>        
     </table>  
@@ -101,6 +99,8 @@ export default {
               .then(response => response.json())
               .then(data => {console.log(data);
                 this.eventData = data;
+                alert("DELETED");
+                window.location.reload();
             })
               .catch(err => console.log)
         },
@@ -118,6 +118,7 @@ export default {
                 .then(response => response.json())
                 .then(data => {console.log(data);
                 this.eventData = data;
+                alert("successfully updated");
             })
                 .catch(err => console.log)
           },

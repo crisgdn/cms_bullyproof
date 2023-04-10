@@ -36,8 +36,10 @@ export default {
             .then(response => response.json())
             .then(data => {console.log(data);
                 this.emailData = data;
+                alert("DELETED");
+                window.location.reload(); // recarregar a página
             })
-            .catch(err => console.log)
+            .catch(err => console.log);
         }
 
     },

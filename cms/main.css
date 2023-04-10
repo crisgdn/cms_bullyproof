@@ -232,6 +232,31 @@ main {
   max-width: 950px;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.red {
+  background-color: #EA4B5D;
+  margin-right: 10px;
+}
+
+.box {
+  width: 70%;
+  height: 100px;
+  background: #DFE7F3;
+  border-radius: 24px;
+  padding-left: 20px;
+  margin:10px;
+  font-size: 14px;
+}
+
+.box p {
+  margin-right: 10px;
+}
+
   table {
     border: 1px solid #ccc;
     border-collapse: collapse;

@@ -71,6 +71,7 @@ export default {
                 .then(response => response.json())
                 .then(data => {console.log(data);
                 this.eventData = data;
+                alert("successfully updated");
             })
                 .catch(err => console.log)
           },
