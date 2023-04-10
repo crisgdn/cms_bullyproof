@@ -1,0 +1,134 @@
+// footer component 
+
+#footer {
+    width: 100%;
+    // stick it to the bottom the page 
+
+    
+    height: 50vh;
+    display: flex;
+    
+    
+
+    
+}
+
+#footer-form {
+    width: 100%;
+    // stick it to the bottom the page 
+    height: 50vh;
+    display: flex;
+}
+.footer {
+    font-family: 'Helvetica';
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_heading-text {
+
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+
+.footer_text {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #fff;
+    font-family: var(--font-secondary);
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+.icon {
+    font-size: 22px;
+    margin-right: 10px;
+    cursor: pointer; 
+ 
+    &:hover {
+        transform: scale(2.2);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+// for desktop 
+
+@media screen and (min-width: 768px) {
+    
+    #footer {
+        height: 20vh;
+        padding: 20px;
+        margin-top: 500px;
+        color: #fff;
+        background-color: var(--color-primary);
+    }
+    
+    #footer-form {
+        height: 20vh;
+        padding: 20px;
+        color: #fff;
+        background-color: var(--color-primary);
+    }
+    .footer {
+        display: grid; 
+        grid-template-columns: repeat(2,1fr);
+        width: 50%;
+        // align items to the center
+        align-items: start;
+        justify-content: center;
+        
+    }
+
+    .footer_heading-text {
+
+
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        font-family: var(--font-secondary);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        line-height: 20px;
+    }
+
+    .footer_text {
+
+        font-size: 16px;
+        color: #fff;
+        font-family: var(--font-secondary);
+        text-align: center;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+
+    .icon {
+      font-size: 20px;
+      // margin - between the icons
+        margin-right: 15px;
+
+    }
+}
