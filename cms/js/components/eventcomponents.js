@@ -57,7 +57,7 @@ export default {
             <button v-on:click="updateEvent(event.id)" type="submit">Update</button>
             </div>
           </form>
-          <button class="black" v-on:click="showForm = false">Cancel</button>  
+            <button class="red" v-on:click="showForm = false">Cancel</button>  
           <hr>
     </div>
     <div class="inline-form box" v-if="box">

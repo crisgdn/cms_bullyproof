@@ -42,7 +42,7 @@ export default {
             <button v-on:click="updateTestimonial(testimonial.id)" type="submit">Update</button>
             </div>
         </form>
-        <button class="black" v-on:click="showForm = false">Cancel</button>  
+        <button class="red" v-on:click="showForm = false">Cancel</button>  
         <hr>
     </div>
 

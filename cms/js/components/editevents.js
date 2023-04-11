@@ -54,10 +54,12 @@ export default {
             
             <div class="inline-form">
             <button v-on:click="updateEvent(event.id)" type="submit">Update</button>
-            <button class="black" @click="cancel">Cancel</button>  
+             
             </div>
           </form>
+          <button class="red" @click="cancel">Cancel</button> 
           <hr>
+
           
 
 `,   
