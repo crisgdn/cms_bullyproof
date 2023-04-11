@@ -27,7 +27,14 @@ Lumen is the folder with the backend of the website and the CMS(Content manageme
 
 CMS or Content management system has the files of the system that gets all the registrations and emails from the website. It also updates, detele and creates new events and testimonials cards for the website. The fontend was developed with Javascript, Vue.js, CSS and HTML.
 
-The website shows information about our campaign BullyProof Hockey, actions, events, testimonials, chat and help phone line.
+The website shows information about our campaign BullyProof Hockey, actions, events, testimonials, chat and help phone line. Our website is built using the following technologies:
+
+- HTML
+- CSS
+- PHP
+- JavaScript
+- SQL (for event section)
+- tawk.io (for chat bot integration)
 
 Finally, the database has the updated database used in the project.
 
