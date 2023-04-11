@@ -57,11 +57,14 @@
         </header>
 
         <!--- Forms --->
-        <main id="events" class="">
+        <main id="events2" class="">
             <h2>Create New Event</h2>
 
             <!--- CARD --->
-            <form action ="http://localhost:8000/api/events/" method="POST" class="edit-blog-form" enctype="multipart/form-data" onsubmit="return CreateEvent()">
+            <a href="listevents.html"><button>Go Back</button></a>
+            <hr>
+
+            <form action ="http://localhost:8000/api/events/" method="POST" class="edit-blog-form" enctype="multipart/form-data">
 
                 <div class="form-field field-1 medium">
                   <label for="card">Card Title</label>
@@ -91,12 +94,11 @@
                   <label for="live">Button Link</label>
                   <input id="live" type="text" name="live">
                 </div>
-                <div class="inline-form">
-                  <button class="black" type="submit">Create</button>
-                  
+                <div class="">
+                  <button  type="submit">Create</button>                  
                 </div>
               </form>
-              <a href="listevents.html"><button>Cancel</button></a>
+              
         </main>   
 
 
